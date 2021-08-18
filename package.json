@@ -1,0 +1,25 @@
+{
+  "name": "dw-proy-rossi-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giani-rossi/DW-Proy-Rossi-master.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giani-rossi/DW-Proy-Rossi-master/issues"
+  },
+  "homepage": "https://github.com/giani-rossi/DW-Proy-Rossi-master#readme",
+  "dependencies": {
+    "module": "^1.2.5",
+    "node": "^16.1.0"
+  }
+}

@@ -1,0 +1,371 @@
+$bloquesunidades: #d9c1a1;
+$grisoscuro: #fff;
+
+$font-family: "Share Tech Mono", monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: $bloquesunidades;
+  width: 100%;
+  min-width: 100vh;
+}
+
+@mixin boton {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #947533;
+  background-color: #d9c1a1;
+  border: 2px solid #d9c1a1;
+  text-decoration: none;
+  margin-left: 15px;
+}
+@mixin titulosGrises {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 3rem 0rem 0.5rem 0rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "$font-family", sans-serif;
+}
+
+@mixin titulosGrises_ {
+  font-size: 15px;
+  font-weight: 500;
+  /*padding: 1rem 0rem 1rem 0rem;
+  margin: 0 0 0 1.5rem;*/
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "$font-family", sans-serif;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+@mixin lineaGris {
+  content: "";
+  width: 50px;
+  height: 1px;
+  display: inline-block;
+  background: #947533;
+  margin: 4px 10px;
+}
+
+@mixin titulosMarrones {
+  margin: 0 0 0 1.5rem;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #947533;
+}
+
+@mixin titulosMarrones_ {
+  /*margin: 0 0 0 1.5rem;*/
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #947533;
+  margin-left: 70px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+}
+
+.departamentos {
+  .box {
+    padding: 70px 70px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+.departamentos .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #947533;
+}
+
+.departamentos .box h4 {
+  font-size: 24px;
+  height: 28px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px;
+  color: #947533;
+}
+
+.departamentos .box p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  height: 120px;
+}
+.departamentos .box a {
+  color: #aaaaaa;
+  font-size: 15px;
+  font-style: italic;
+
+  padding: 0;
+}
+
+.departamentos .box:hover {
+  background: #947533;
+
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.departamentos .box:hover span,
+.departamentos .box:hover h4,
+.departamentos .box:hover p {
+  color: #fff1d3;
+}
+
+@media (max-width: 900px) {
+  .box {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .box span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #947533;
+  }
+
+  .departamentos .box h4 {
+    font-size: 24px;
+    height: 28px;
+    font-weight: 600;
+    padding: 0;
+    color: #947533;
+  }
+
+  .departamentos .box p {
+    display: none;
+  }
+  .departamentos .box a {
+    color: #aaaaaa;
+    font-size: 15px;
+    font-style: italic;
+
+    padding: 0;
+  }
+
+  .departamentos .box:hover {
+    background: #947533;
+
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  }
+
+  .departamentos .box:hover span,
+  .departamentos .box:hover h4,
+  .departamentos .box:hover p {
+    color: #fff1d3;
+  }
+
+  .titularesUnidades p {
+    width: 50%;
+    display: inline-block;
+    margin-left: 0px;
+  }
+
+  .titularesUnidades .linkDepartamento img {
+    width: 50%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+  }
+
+  .returnLinks {
+    display: flex;
+    justify-content: end;
+    @include titulosGrises_();
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .mapouter {
+    display: inline-block;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+    margin: 10px;
+  }
+}
+
+.departamentos {
+  width: auto;
+  text-align: center;
+}
+
+@media (min-width: 901px) {
+  .titularesUnidades .linkDepartamento img {
+    width: 50%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+  }
+}
+
+.section-title h4 {
+  @include titulosGrises;
+}
+
+.section-title h4::after {
+  @include lineaGris;
+}
+
+.section-title p {
+  @include titulosMarrones;
+}
+
+.section-title span {
+  @include titulosGrises;
+}
+
+.returnLinks {
+  display: flex;
+  justify-content: center;
+  @include titulosGrises_();
+  text-decoration: none;
+  margin: 10px;
+}
+
+/*SECTION DE DEPARTAMENTOS - IMAGENES LOCALIZACION ETC*/
+
+.linkDepartamento img {
+  position: relative;
+  transition: 0.5s;
+  height: 900px;
+  width: 1200px;
+  margin: 10px;
+}
+
+.linkDepartamento .linkDepartamento-img img {
+  max-width: 100%;
+  max-height: 100%;
+  /*border: 4px solid rgba(255, 255, 255, 0.2);*/
+  position: relative;
+  background-size: cover;
+}
+
+.linkDepartamento .linkDepartamento-img::before {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-left: 5px solid #fff;
+  border-top: 5px solid #fff;
+  transition: 0.5s;
+}
+
+.linkDepartamento .linkDepartamento-img::after {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  content: "";
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  transition: 0.5s;
+}
+
+.linkDepartamento .linkDepartamento-img:hover {
+  transform: scale(1.05);
+}
+
+.linkDepartamento .linkDepartamento-img:hover::before {
+  left: 10px;
+  top: 10px;
+}
+
+.linkDepartamento .linkDepartamento-img:hover::after {
+  right: 10px;
+  bottom: 10px;
+}
+
+.linkDepartamento .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #ffff;
+}
+
+.linkDepartamento .content p:last-child {
+  margin-bottom: 0;
+  margin-top: 60px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/*@media (max-width: 1024px) {
+  .linkDepartamento {
+    background-attachment: fixed;
+  }
+}*/
+
+@media (max-width: 576px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .departamentos {
+    width: 100%;
+  }
+
+  .titularesUnidades .linkDepartamento img {
+    width: 30%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+  }
+}
+
+.titularesUnidades h4 {
+  @include titulosGrises();
+  color: #947533;
+}
+
+.titularesUnidades {
+  margin: 20px;
+}
+
+h4::after {
+  @include lineaGris;
+}
+
+.titularesUnidades p {
+  @include titulosGrises_();
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
